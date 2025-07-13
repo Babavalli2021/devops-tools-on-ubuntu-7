@@ -55,7 +55,7 @@ You can customize the script to include or exclude specific tools as per your ne
 1. Clone this repository to your local machine:
 
    ```bash
-   git clone https://github.com/francotel/devops-tools-on-ubuntu.git
+   git clone (https://github.com/Babavalli2021/devops-tools-on-ubuntu-7.git)
    ```
 
 2. Navigate to the project directory:
