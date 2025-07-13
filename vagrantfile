@@ -1,0 +1,25 @@
+# Vagrantfile
+Vagrant.configure("2") do |config|
+  config.vm.box = "bento/ubuntu-24.04"
+
+  # Configura la memoria y el número de CPUs
+  config.vm.provider "virtualbox" do |vb|
+    vb.memory = "4096" # RAM en MB (4 GB)
+    vb.cpus = 2        # Número de CPUs asignadas
+  end 
+    # Configura la red y los recursos de la máquina virtual
+    # config.vm.network "forwarded_port", guest: 22, host: 2222 # SSH
+    # config.vm.network "forwarded_port", guest: 80, host: 8080 # HTTP
+
+    config.vm.network "public_network", bridge: "en0: Wi-Fi (AirPort)" # Cambia esto por el nombre correcto de tu interfaz de red
+
+    # Configura el script de provisión
+    config.vm.provision "shell", inline: <<-SHELL
+      # Clona el repositorio
+      git clone https://github.com/francotel/devops-tools-on-ubuntu.git /home/vagrant/devops-tools-on-ubuntu
+      # Cambia los permisos del script para que sea ejecutable
+      chmod +x /home/vagrant/devops-tools-on-ubuntu/install-tools.sh
+      echo "Repositorio clonado en /home/vagrant/devops-tools-on-ubuntu"
+
+    SHELL
+  end
