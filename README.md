@@ -144,9 +144,8 @@ Contributions are welcome! Feel free to open an issue or submit a pull request w
 
 ##  🤝 **Let's Connect!**
 
-If you find this repository useful and want to see more content like this, follow me on LinkedIn to stay updated on more projects and resources!
 
-[![LinkedIn](https://seeklogo.com/images/L/linkedin-logo-E871D8437B-seeklogo.com.png)](https://www.linkedin.com/in/franconavarro/)
+
 
 If you’d like to support my work, you can buy me a coffee. Thank you for your support!
 
